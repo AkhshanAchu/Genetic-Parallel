@@ -37,20 +37,6 @@ Input Layer (784) → Hidden Layer (128) → Output Layer (10)
                Sigmoid        Softmax
 ```
 
-### 🧬 Genetic Algorithm Flow
-
-```mermaid
-graph TD
-    A[Initialize Population] --> B[Evaluate Fitness]
-    B --> C[Select Best Performers]
-    C --> D[Crossover Operations]
-    D --> E[Mutation Operations]
-    E --> F[Create Next Generation]
-    F --> G{Max Generations?}
-    G -->|No| B
-    G -->|Yes| H[Return Best Solution]
-```
-
 ## 🔧 Prerequisites
 
 Before you begin, ensure you have:
