@@ -1,35 +1,35 @@
-# 🧬 Genetic Algorithm Neural Network for MNIST
+# Genetic Algorithm Neural Network for MNIST
 
 [![C++](https://img.shields.io/badge/C++-17-blue.svg?style=flat&logo=c%2B%2B)](https://isocpp.org/)
 [![OpenMP](https://img.shields.io/badge/OpenMP-Parallel-green.svg)](https://www.openmp.org/)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com)
 
-> 🚀 A high-performance implementation of Genetic Algorithm optimization for Neural Networks, specifically designed for MNIST digit classification with OpenMP parallelization.
+> A high-performance implementation of Genetic Algorithm optimization for Neural Networks, specifically designed for MNIST digit classification with OpenMP parallelization.
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [🌟 Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [🔧 Prerequisites](#-prerequisites)
-- [⚡ Installation](#-installation)
-- [🎯 Usage](#-usage)
-- [📊 Performance](#-performance)
-- [🧪 Genetic Operations](#-genetic-operations)
-- [📈 Results](#-results)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [ Features](#-features)
+- [Architecture](#️-architecture)
+- [ Prerequisites](#-prerequisites)
+- [ Installation](#-installation)
+- [ Usage](#-usage)
+- [ Performance](#-performance)
+- [ Genetic Operations](#-genetic-operations)
+- [ Results](#-results)
+- [ Contributing](#-contributing)
+- [ License](#-license)
 
-## 🌟 Features
+##  Features
 
-✨ **Key Highlights:**
-- 🧠 **Neural Network**: 2-layer feedforward network (784→128→10)
-- 🧬 **Genetic Algorithm**: Evolution-based weight optimization
-- ⚡ **OpenMP Parallelization**: Multi-threaded performance boost
-- 📊 **MNIST Dataset**: Handwritten digit recognition
-- 🎯 **Multiple Mutation Strategies**: Gaussian addition/subtraction with crossover
-- 📈 **Real-time Performance Tracking**: Generation-by-generation accuracy monitoring
+ **Key Highlights:**
+-  **Neural Network**: 2-layer feedforward network (784→128→10)
+-  **Genetic Algorithm**: Evolution-based weight optimization
+-  **OpenMP Parallelization**: Multi-threaded performance boost
+-  **MNIST Dataset**: Handwritten digit recognition
+-  **Multiple Mutation Strategies**: Gaussian addition/subtraction with crossover
+- **Real-time Performance Tracking**: Generation-by-generation accuracy monitoring
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Input Layer (784) → Hidden Layer (128) → Output Layer (10)
@@ -41,11 +41,11 @@ Input Layer (784) → Hidden Layer (128) → Output Layer (10)
 
 Before you begin, ensure you have:
 
-- 🖥️ **C++ Compiler**: GCC 7.0+ or Clang 5.0+ with C++17 support
-- 🔄 **OpenMP**: For parallel processing capabilities
-- 📁 **MNIST Dataset**: CSV format (`mnist.csv`)
+-  **C++ Compiler**: GCC 7.0+ or Clang 5.0+ with C++17 support
+-  **OpenMP**: For parallel processing capabilities
+-  **MNIST Dataset**: CSV format (`mnist.csv`)
 
-### 📦 System Requirements
+###  System Requirements
 
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
@@ -53,20 +53,20 @@ Before you begin, ensure you have:
 | CPU Cores | 2 | 4+ |
 | Storage | 100MB | 500MB |
 
-## ⚡ Installation
+## Installation
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/yourusername/genetic-neural-network.git
 cd genetic-neural-network
 ```
 
-### 2️⃣ Prepare MNIST Dataset
+### Prepare MNIST Dataset
 Download the MNIST dataset in CSV format and place it as `mnist.csv` in the project directory.
 
-### 3️⃣ Compile the Code
+### Compile the Code
 
-#### 🔄 With OpenMP (Recommended)
+#### With OpenMP (Recommended)
 ```bash
 g++ -std=c++17 -fopenmp -O3 -o genetic_nn_parallel genetic_nn_parallel.cpp
 ```
@@ -76,19 +76,19 @@ g++ -std=c++17 -fopenmp -O3 -o genetic_nn_parallel genetic_nn_parallel.cpp
 g++ -std=c++17 -O3 -o genetic_nn_sequential genetic_nn_sequential.cpp
 ```
 
-## 🎯 Usage
+## Usage
 
-### 🚀 Run with Parallelization
+###  Run with Parallelization
 ```bash
 ./genetic_nn_parallel
 ```
 
-### 🐌 Run Sequential Version
+### Run Sequential Version
 ```bash
 ./genetic_nn_sequential
 ```
 
-### ⚙️ Configuration
+### Configuration
 
 Modify these parameters in the source code:
 
@@ -98,28 +98,28 @@ int generations = 40;          // Number of generations
 int hiddenSize = 128;          // Hidden layer neurons
 ```
 
-## 📊 Performance
+##  Performance
 
-### 🏃‍♂️ Speed Comparison
+### Speed Comparison
 
 | Version | Population | Generations | Avg. Time/Generation |
 |---------|------------|-------------|---------------------|
 | Sequential | 10 | 10 | ~15-20 seconds |
 | Parallel (4 cores) | 40 | 40 | ~8-12 seconds |
 
-### 📈 Typical Results
-- 🎯 **Initial Accuracy**: ~10-15%
-- 🚀 **Final Accuracy**: ~60-80% (varies by run)
-- ⏱️ **Convergence**: Usually within 20-30 generations
+### Typical Results
+-  **Initial Accuracy**: ~10-15%
+-  **Final Accuracy**: ~60-80% (varies by run)
+-  **Convergence**: Usually within 20-30 generations
 
-## 🧪 Genetic Operations
+##  Genetic Operations
 
-### 🧬 Selection Strategy
+###  Selection Strategy
 - **Elite Selection**: Top 2 performers always survive
 - **Crossover**: Weight mixing between top 8 organisms
 - **Tournament Selection**: Random selection from top performers
 
-### 🔄 Mutation Types
+### Mutation Types
 
 | Operation | Description | Probability |
 |-----------|-------------|-------------|
@@ -129,9 +129,9 @@ int hiddenSize = 128;          // Hidden layer neurons
 | **Crossover + Add** | Crossover followed by addition | 20% |
 | **Crossover + Sub** | Crossover followed by subtraction | 20% |
 
-## 📈 Results
+## Results
 
-### 🏆 Sample Output
+### Sample Output
 ```
 ####Details####
 Total Organisms : 40
@@ -149,14 +149,14 @@ Top Accuracy : 78.45
 Time taken by generation : 8 seconds
 ```
 
-### 📊 Performance Visualization
+### Performance Visualization
 The algorithm typically shows:
-- 📈 **Rapid Initial Growth**: 10% → 40% in first 10 generations
-- 🎯 **Steady Improvement**: 40% → 70% in next 20 generations  
-- 🏔️ **Plateau Phase**: Final 10 generations for fine-tuning
+- **Rapid Initial Growth**: 10% → 40% in first 10 generations
+-  **Steady Improvement**: 40% → 70% in next 20 generations  
+-  **Plateau Phase**: Final 10 generations for fine-tuning
 
 
-## 📝 Code Structure
+##  Code Structure
 
 ```
 ├── genetic_nn_parallel.cpp    # OpenMP parallelized version
@@ -165,48 +165,48 @@ The algorithm typically shows:
 └── README.md                  # This file
 ```
 
-## 🔍 Key Classes and Functions
+## Key Classes and Functions
 
-### 🧠 `SimpleANN` Class
+### `SimpleANN` Class
 - **Constructor**: Initialize network with random weights
 - **`forwardPropagation()`**: Calculate network output
 - **`calculateAccuracy()`**: Evaluate performance on dataset
 - **`add_gaussian()`**: Add mutation noise
 - **`sub_gaussian()`**: Subtract and multiply mutation
 
-### 🧬 Genetic Functions
+###  Genetic Functions
 - **`compareByPerformance()`**: Sort organisms by fitness
 - **Selection Logic**: Choose parents for next generation
 - **Crossover Operations**: Mix genetic material
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues:
 
-**❌ Compilation Error**: `fatal error: omp.h: No such file`
+**Compilation Error**: `fatal error: omp.h: No such file`
 ```bash
 # Install OpenMP
 sudo apt-get install libomp-dev  # Ubuntu/Debian
 brew install libomp              # macOS
 ```
 
-**❌ Dataset Not Found**: `Error: Unable to open the CSV file`
+**Dataset Not Found**: `Error: Unable to open the CSV file`
 - Ensure `mnist.csv` is in the project directory
 - Check file permissions
 
-**❌ Poor Performance**: Accuracy stuck below 20%
+**Poor Performance**: Accuracy stuck below 20%
 - Try different random seeds
 - Adjust mutation rates
 - Increase population size or generations
 
-## 🎓 Educational Value
+## Educational Value
 
 This project demonstrates:
-- 🧬 **Genetic Algorithms**: Population-based optimization
-- 🧠 **Neural Networks**: Feedforward architecture
-- ⚡ **Parallel Computing**: OpenMP implementation
-- 📊 **Machine Learning**: Classification problem solving
-- 🔄 **Evolutionary Computing**: Bio-inspired algorithms
+-  **Genetic Algorithms**: Population-based optimization
+- **Neural Networks**: Feedforward architecture
+-  **Parallel Computing**: OpenMP implementation
+- **Machine Learning**: Classification problem solving
+-  **Evolutionary Computing**: Bio-inspired algorithms
 
 
 Made with ❤️ by NiceGuy
