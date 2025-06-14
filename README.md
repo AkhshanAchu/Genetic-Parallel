@@ -37,7 +37,7 @@ Input Layer (784) → Hidden Layer (128) → Output Layer (10)
                Sigmoid        Softmax
 ```
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have:
 
@@ -71,7 +71,7 @@ Download the MNIST dataset in CSV format and place it as `mnist.csv` in the proj
 g++ -std=c++17 -fopenmp -O3 -o genetic_nn_parallel genetic_nn_parallel.cpp
 ```
 
-#### 📱 Sequential Version
+#### Sequential Version
 ```bash
 g++ -std=c++17 -O3 -o genetic_nn_sequential genetic_nn_sequential.cpp
 ```
